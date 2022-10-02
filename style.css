@@ -1,0 +1,22 @@
+.banner {
+    background-image: url("images/banner.jpg");
+    height: 400px;
+    width: 100%;
+}
+
+.card-items {
+    height: 180px;
+}
+
+.budget {
+    display: flex;
+    flex-direction: column;
+}
+
+.player-budget {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}

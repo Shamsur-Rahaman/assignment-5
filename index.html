@@ -1,0 +1,157 @@
+<!-- git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/programming-hero-web-course2/best-five-dom-assignment-Shamsur-Rahaman.git
+git push -u origin main -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <title>Assignment - 5</title>
+    <style>
+        .banner {
+            background-image: url("images/banner.jpg");
+            background-repeat: no-repeat;
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container-fluid">
+        <!-- Background image -->
+        <div class="p-5 text-center banner">
+
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="text-white">
+                    <h1 class="mb-3">Select Your Top Players</h1>
+                    <h4 class="mb-3">Brazil Football Team</h4>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mt-5">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <img src="images/neymer.jpeg" alt="" class="rounded img-fluid card-img-top">
+                                <h5 class="card-title" id="neymer">Neymer Junior</h5>
+                                <p>360 Goals <span>.</span>300 Match</p>
+                                <a href="#" id="btn1" class="btn btn-primary text-center w-100 btn-select">Select 1</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <img src="images/vini.jpeg" alt="" class="img-fluid rounded card-img-top">
+                                <h5 class="card-title" id="vini">Vini Junior</h5>
+                                <p>360 Goals <span>.</span>300 Match</p>
+                                <a href="#" id="btn2" class="btn btn-primary text-center w-100 btn-select">Select 2</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <img src="images/raphinha.jpeg" alt="" class="img img-fluid">
+                                <h5 class="card-title" id="raphinha">Raphinha</h5>
+                                <p>360 Goals <span>.</span>300 Match</p>
+                                <a href="#" id="btn3" class="btn btn-primary text-center w-100 btn-select">Select 3</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <img src="images/coutinho.jpeg" alt="" class="img img-fluid">
+                                <h5 class="card-title" id="coutinho">Coutinho</h5>
+                                <p>360 Goals <span>.</span>300 Match</p>
+                                <a href="#" id="btn4" class="btn btn-primary text-center w-100 btn-select">Select 4</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <img src="images/richalison.jpeg" alt="" class="img img-fluid">
+                                <h5 class="card-title" id="richalison">Richalison</h5>
+                                <p>360 Goals <span>.</span>300 Match</p>
+                                <a href="#" id="btn5" class="btn btn-primary text-center w-100 btn-select">Select 5</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <img src="images/bruno guimarez.jpeg" alt="" class="img img-fluid">
+                                <h5 class="card-title" id="bruno">Bruno Guimarez</h5>
+                                <p>360 Goals <span>.</span>300 Match</p>
+                                <a href="#" id="btn6" class="btn btn-primary text-center w-100 btn-select">Select 6</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="row">
+                    <div class="card text-center">
+                        <h4 class="mt-2">Selected - V</h4>
+                        <ul class="list-group pt-2 pb-4" id="player-list">
+                            <li class="list-group-item players" id="player1"></li>
+                            <li class="list-group-item players" id="player2"></li>
+                            <li class="list-group-item players" id="player3"></li>
+                            <li class="list-group-item players" id="player4"></li>
+                            <li class="list-group-item players" id="player5"></li>
+                        </ul>
+                    </div>
+
+                    <div class="card text-center mt-5">
+                        <h3 class="pt-4">Budget</h3>
+                        <div class="input-group">
+
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="">Per player</span>
+                            </div>
+                            <input type="text" class="form-control" id="player-budget">
+                        </div>
+                        <button class="btn btn-primary mt-3 mb-3" id="calculate">Calculate</button>
+                        <h5>Player Expense $<span id="player-expense"></span></h5>
+                        <div class="input-group mt-2 mb-2">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="">Manager</span>
+                            </div>
+                            <input type="text" class="form-control" id="manager-budget">
+                        </div>
+                        <div class="input-group mt-2 mb-2">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="">Coach</span>
+                            </div>
+                            <input type="text" class="form-control" id="coach-budget">
+                        </div>
+                        <button class="btn btn-primary mt-3 mb-3" id="calculate">Calculate Total</button>
+                        <h5>Total <span> $</span><span id="total-expense"></span></h5>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
